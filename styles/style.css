@@ -1,0 +1,90 @@
+h1 {
+    background-color: pink;
+    font-style: oblique;
+    text-align: center;
+    border-style:dotted;
+    border-width: thin;
+}
+
+section article {
+    font-style: italic;
+}
+
+.container-one {
+    background-color: rgba(255, 192, 203, 0.979);
+}
+
+p {
+    border-style: dotted;
+    border-width: thin;
+    background-color: white;
+    text-align: center;
+}
+img {
+    max-width: 20cm;
+    height: 10cm;
+}
+
+nav ul {
+    list-style-type:none;
+    display: inline;
+    float: right;
+}
+nav ul :hover {
+    background-color: pink;
+}
+
+.presentacion {
+    justify-self: center;
+    align-self:center;
+}
+ol.contacto {
+    float: left;
+    list-style:circle;
+}
+h5 {
+   text-align: center;
+}
+
+.container-grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.primer-grid {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.nos-columna {
+    display: grid;
+    grid-template-columns: auto auto;
+    float:right;
+}
+.qui-columna {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.pro-columna {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+@media (max-width: 400px) {
+   body {
+      font-size: small;
+      background-size: 50%;
+    }
+  img {
+    width: 80%;
+    height: 40%;
+  }
+  p {
+    width: 50%;
+    font-size: small;
+  }
+}
+
+
+  
