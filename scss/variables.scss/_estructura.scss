@@ -1,0 +1,151 @@
+h1 {
+    background-color: $color-primario;
+    font-style: $font-h1;
+    text-align: $align-primario;
+    border-style:$border-style;
+    border-width: $border-width;
+}
+
+div {
+    font-style: $font-div;
+}
+
+.container-one {
+    background-color: $color-secundario;
+    grid-template-areas: div;
+}
+
+p {
+    border-style: $border-style;
+    border-width: $border-width;
+    background-color: $color-terciario;
+    text-align: $align-primario;
+}
+img {
+    max-width: $img-max-width;
+    height: $img-height;
+}
+
+nav {
+ color: $color-nav;
+   ul {
+    list-style-type: $list-style-one;
+    display: $display-inline;
+    float: $align-terciario;
+    } 
+ }
+
+ .navbar-toggler-icon {
+    background-color: $color-nav;
+ }
+.presentacion {
+    justify-self: $align-primario;
+    align-self:$align-primario;
+}
+ol.contacto {
+    float: $align-secundario;
+    list-style: $list-style-two;
+}
+h2 {
+   text-align: $align-primario;
+}
+@mixin grid-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container-grid-contacto {
+    @include grid-column;
+    gap: $gap-two;
+}
+
+.primer-grid {
+    display: $display-grid;
+    grid-template-rows: $column-row-one;
+}
+
+.nos-columna {
+    display: $display-grid;
+    grid-template-columns: $column-row-two;
+    justify-items: $align-primario;
+    gap: $gap-one;
+}
+.qui-columna {
+    display: $display-grid;
+    grid-template-columns: $grid-columns-one;
+    grid-template-rows: $column-row-one;
+    justify-items: $align-primario;
+}
+.flex-item {
+    display: $display-flex;
+    justify-content: $align-primario;
+    flex-direction: $flex-direction-one;
+    align-items: $align-primario;
+    flex-wrap: $flex-wrap;
+}
+
+.pro-columna {
+    @include grid-column;
+    text-align: $align-primario;
+    align-items: $align-primario;
+}
+
+
+
+@media (max-width: 700px) {
+   body {
+      font-size: $font-size-one;
+      background-size: $background-size-one;
+    }
+  img {
+    display: $display-flex;
+    flex-direction: $flex-direction-one;
+    align-items: $align-primario;
+    background-size: $background-size-two;
+    flex: $flex-one;
+    max-width: $img-max-width-mq;
+    flex-wrap: $flex-wrap;
+  }
+  p {
+    font-size: $font-size-one;
+    display: $display-flex;
+    flex-direction: $flex-direction-one;
+    flex: $flex-one;
+    flex-wrap: $flex-wrap;
+    align-items: $align-primario;
+    justify-content: $align-primario;
+  }
+  nav ul  {
+    width: $column-row-one;
+  }
+  .container-grid-contacto {
+    display: $display-flex;
+    flex-direction: $flex-direction-two;
+    flex-wrap: $flex-wrap;
+  }
+  .row {
+    display: $display-flex;
+    flex-direction: $flex-direction-two;
+    flex-wrap: $flex-wrap;
+  }
+  .nos-columna {
+    display: $display-flex;
+    flex-direction: $flex-direction-two;
+    flex-wrap: $flex-wrap;
+    align-items: $align-primario;
+  }
+  .qui-columna {
+    display: $display-flex;
+    flex-direction: $flex-direction-two;
+    flex-wrap: $flex-wrap;
+  }
+  .pro-columna {
+    display: $display-flex;
+    flex-direction: $flex-direction-two;
+    flex-wrap: $flex-wrap;
+    align-items: $align-primario;
+  }
+
+}
+
+
+

@@ -1,0 +1,152 @@
+h1 {
+  background-color: pink;
+  font-style: oblique;
+  text-align: center;
+  border-style: dotted;
+  border-width: thin;
+}
+
+div {
+  font-style: italic;
+}
+
+.container-one {
+  background-color: rgba(255, 192, 203, 0.979);
+  grid-template-areas: div;
+}
+
+p {
+  border-style: dotted;
+  border-width: thin;
+  background-color: white;
+  text-align: center;
+}
+
+img {
+  max-width: 20cm;
+  height: 10cm;
+}
+
+nav {
+  color: black;
+}
+nav ul {
+  list-style-type: none;
+  display: inline;
+  float: right;
+}
+
+.navbar-toggler-icon {
+  background-color: black;
+}
+
+.presentacion {
+  justify-self: center;
+  align-self: center;
+}
+
+ol.contacto {
+  float: left;
+  list-style: circle;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container-grid-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.primer-grid {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.nos-columna {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  gap: 1em;
+}
+
+.qui-columna {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pro-columna {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: small;
+    background-size: 50%;
+  }
+  img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-size: contain;
+    flex: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  p {
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul {
+    width: auto;
+  }
+  .container-grid-contacto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .nos-columna {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .qui-columna {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .pro-columna {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
