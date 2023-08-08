@@ -20,19 +20,63 @@ p {
     border-width: $border-width;
     background-color: $color-terciario;
     text-align: $align-primario;
+    transition: all 2s;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
+
+p:hover {
+  height: 120px;
+  background-color: rgb(250, 156, 200);
+  filter: opacity(.8);
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 img {
     max-width: $img-max-width;
     height: $img-height;
+    transform: all;
 }
 
-nav {
+img:hover {
+  transform: scale(0.9);
+  filter: blur(2px)
+}
+
+nav :hover{
  color: $color-nav;
    ul {
     list-style-type: $list-style-one;
-    display: $display-inline;
-    float: $align-terciario;
     } 
+ }
+
+
+ .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+ }
+
+ .offcanvas-title {
+  color: pink;
+ }
+.nav-link {
+  color: pink;
+}
+ .dropdown-item {
+  color: pink;
  }
 
  .navbar-toggler-icon {
@@ -59,28 +103,28 @@ h2 {
 }
 
 .primer-grid {
-    display: $display-grid;
+    display: grid;
     grid-template-rows: $column-row-one;
 }
 
 .nos-columna {
-    display: $display-grid;
+    display: grid;
     grid-template-columns: $column-row-two;
     justify-items: $align-primario;
     gap: $gap-one;
 }
 .qui-columna {
-    display: $display-grid;
+    display: grid;
     grid-template-columns: $grid-columns-one;
     grid-template-rows: $column-row-one;
     justify-items: $align-primario;
 }
 .flex-item {
-    display: $display-flex;
+    display: flex;
     justify-content: $align-primario;
-    flex-direction: $flex-direction-one;
+    flex-direction: row;
     align-items: $align-primario;
-    flex-wrap: $flex-wrap;
+    flex-wrap: wrap;
 }
 
 .pro-columna {
@@ -97,20 +141,20 @@ h2 {
       background-size: $background-size-one;
     }
   img {
-    display: $display-flex;
-    flex-direction: $flex-direction-one;
+    display: flex;
+    flex-direction: row;
     align-items: $align-primario;
     background-size: $background-size-two;
     flex: $flex-one;
     max-width: $img-max-width-mq;
-    flex-wrap: $flex-wrap;
+    flex-wrap: wrap;
   }
   p {
     font-size: $font-size-one;
-    display: $display-flex;
-    flex-direction: $flex-direction-one;
+    display: flex;
+    flex-direction: row;
     flex: $flex-one;
-    flex-wrap: $flex-wrap;
+    flex-wrap: wrap;
     align-items: $align-primario;
     justify-content: $align-primario;
   }
@@ -118,34 +162,86 @@ h2 {
     width: $column-row-one;
   }
   .container-grid-contacto {
-    display: $display-flex;
-    flex-direction: $flex-direction-two;
-    flex-wrap: $flex-wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   .row {
-    display: $display-flex;
-    flex-direction: $flex-direction-two;
-    flex-wrap: $flex-wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   .nos-columna {
-    display: $display-flex;
-    flex-direction: $flex-direction-two;
-    flex-wrap: $flex-wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: $align-primario;
   }
   .qui-columna {
-    display: $display-flex;
-    flex-direction: $flex-direction-two;
-    flex-wrap: $flex-wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   .pro-columna {
-    display: $display-flex;
-    flex-direction: $flex-direction-two;
-    flex-wrap: $flex-wrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: $align-primario;
   }
 
 }
 
-
-
+@media (min-width: 700px) and (max-width: 1200px){
+  body {
+    font-size: $font-size-one;
+    background-size: $background-size-one;
+  }
+img {
+  display: flex;
+  flex-direction: row;
+  align-items: $align-primario;
+  background-size: $background-size-two;
+  flex: $flex-one;
+  max-width: $img-max-width-mq;
+  flex-wrap: wrap;
+}
+p {
+  font-size: $font-size-one;
+  display: flex;
+  flex-direction: row;
+  flex: $flex-one;
+  flex-wrap: wrap;
+  align-items: $align-primario;
+  justify-content: $align-primario;
+}
+nav ul  {
+  width: $column-row-one;
+}
+.container-grid-contacto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.nos-columna {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: $align-primario;
+}
+.qui-columna {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.pro-columna {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: $align-primario;
+}
+}  

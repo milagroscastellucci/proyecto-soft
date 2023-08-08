@@ -20,20 +20,62 @@ p {
   border-width: thin;
   background-color: white;
   text-align: center;
+  transition: all 2s;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
+p:hover {
+  height: 120px;
+  background-color: rgb(250, 156, 200);
+  filter: opacity(0.8);
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 img {
   max-width: 20cm;
   height: 10cm;
+  transform: all;
 }
 
-nav {
+img:hover {
+  transform: scale(0.9);
+  filter: blur(2px);
+}
+
+nav :hover {
   color: black;
 }
-nav ul {
+nav :hover ul {
   list-style-type: none;
-  display: inline;
-  float: right;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.offcanvas-title {
+  color: pink;
+}
+
+.nav-link {
+  color: pink;
+}
+
+.dropdown-item {
+  color: pink;
 }
 
 .navbar-toggler-icon {
@@ -95,6 +137,60 @@ h2 {
 }
 
 @media (max-width: 700px) {
+  body {
+    font-size: small;
+    background-size: 50%;
+  }
+  img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-size: contain;
+    flex: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  p {
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul {
+    width: auto;
+  }
+  .container-grid-contacto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .nos-columna {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .qui-columna {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .pro-columna {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+@media (min-width: 700px) and (max-width: 1200px) {
   body {
     font-size: small;
     background-size: 50%;
