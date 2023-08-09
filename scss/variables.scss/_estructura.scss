@@ -160,7 +160,8 @@ h2 {
   }
 
  p:hover {
-  height: 80%;
+  height: 150%;
+  filter: none;
  }
   nav ul  {
     width: $column-row-one;
