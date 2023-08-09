@@ -158,8 +158,9 @@ h2 {
     align-items: $align-primario;
     justify-content: $align-primario;
   }
-  p:hover {
-  height: 80%;
+ p:hover {
+  height: 150%;
+  filter: none;
  }
   nav ul  {
     width: $column-row-one;
