@@ -1,5 +1,5 @@
 h1 {
-    background-color: $color-primario;
+    background-color: transparent;
     font-style: $font-h1;
     text-align: $align-primario;
     border-style:$border-style;
@@ -158,9 +158,14 @@ h2 {
     align-items: $align-primario;
     justify-content: $align-primario;
   }
+
+ p:hover {
+  height: 80%;
+ }
   nav ul  {
     width: $column-row-one;
   }
+
   .container-grid-contacto {
     display: flex;
     flex-direction: column;

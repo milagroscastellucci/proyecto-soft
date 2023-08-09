@@ -1,5 +1,5 @@
 h1 {
-  background-color: pink;
+  background-color: transparent;
   font-style: oblique;
   text-align: center;
   border-style: dotted;
@@ -158,6 +158,9 @@ h2 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  p:hover {
+    height: 80%;
   }
   nav ul {
     width: auto;
